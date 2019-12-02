@@ -2,7 +2,9 @@ I suppose that commands from client and response will be less than NamedPipe buf
 For demonstration purposes, I've chosen "string" class and its methods.
 Because I've chosen only one custom class I don't need to specify a type.
 
-Architecture explanation: I really hope that I've made good quality code that easy to read without explanation.
+Architecture explanation:  
+1) Asynchronous client use read and write callbacks functions: read callback start write operation and write callback start read operation;
+2) Server use std::function with the vector of arguments to call specific object function or getting it attributes.
 
 Howto:
 1) Start server;
